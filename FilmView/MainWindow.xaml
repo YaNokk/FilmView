@@ -1,0 +1,29 @@
+﻿<Window x:Class="FilmView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilmView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400">
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Label Content="Введите название фильма:" Margin="6 0" FontSize="16px" Foreground="White" x:Name="InputLabel"/>
+                    <TextBox Margin="10" Height="30px" x:Name="FilmInput"/>
+                </StackPanel>
+                <Button Grid.Column="1" Margin="10" Content="ОК" Background="White" x:Name="SendButton" Click="SendButton_Click"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel x:Name="FilmPanel" Orientation="Vertical"/>
+            </Grid>
+        </Grid>
+</Window>
